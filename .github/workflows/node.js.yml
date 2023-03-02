@@ -26,3 +26,9 @@ jobs:
           SCANTISTTOKEN: ${{secrets.SCANTISTTOKEN}}
           SCANTIST_IMPORT_URL : "https://api-staging.scantist.io/ci-scan/" 
         run: java -jar scantist-bom-detect.jar -report json
+        
+      - name: Push to repo
+        run: |
+          git add .
+          git commit -m "Report add"
+          git push
