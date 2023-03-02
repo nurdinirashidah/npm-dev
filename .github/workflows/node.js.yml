@@ -29,6 +29,8 @@ jobs:
         
       - name: Push to repo
         run: |
+          git config --global user.name "nurdinirashidah"
+          git config --global user.email "nurdinirashidah@gmail.com"
           git add .
           git commit -m "Report add"
           git push
